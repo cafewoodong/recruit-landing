@@ -1,1 +1,577 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="main-BBH4KZVP.css" /></head><body><div id="app"></div><div id="root"></div><script src="main-SLAZWLUI.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프라임에셋 마스터사업부 | 보험설계사 채용</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Noto Sans KR', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans KR', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 60%, #38bdf8 100%); }
+    .form-bg { background: linear-gradient(135deg, #075985 0%, #0284c7 60%, #0ea5e9 100%); }
+    .form-input {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #e2e8f0; border-radius: 10px;
+      font-size: 15px; font-family: 'Noto Sans KR', sans-serif;
+      outline: none; transition: border-color 0.2s; box-sizing: border-box;
+    }
+    .form-input:focus { border-color: #0ea5e9; }
+    .form-input.verified { border-color: #10b981; background: #f0fdf4; }
+    .btn-primary {
+      background: #0ea5e9; color: white; padding: 14px 24px;
+      border-radius: 10px; font-weight: 700; width: 100%;
+      cursor: pointer; transition: background 0.2s;
+      font-family: 'Noto Sans KR', sans-serif; font-size: 16px;
+      border: none;
+    }
+    .btn-primary:hover:not(:disabled) { background: #0284c7; }
+    .btn-primary:disabled { background: #94a3b8; cursor: not-allowed; }
+    .fade-in { animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(14,165,233,0.15); }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-sky-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-sky-500 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <span class="font-bold text-xl text-sky-800 tracking-tight">PRIME ASSET</span>
+      </div>
+      <a href="#apply" class="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition-colors shadow">
+        상담 신청
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center relative overflow-hidden pt-16">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -right-20 w-96 h-96 bg-white opacity-5 rounded-full"></div>
+      <div class="absolute bottom-0 -left-20 w-80 h-80 bg-white opacity-5 rounded-full"></div>
+      <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-sky-300 opacity-10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-28 relative w-full">
+      <div class="max-w-xl">
+        <span class="inline-block bg-white/20 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+          2026년 상반기 보험설계사 정규 모집
+        </span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+          당신의 가치를<br>
+          <span class="text-sky-200">가장 투명하게</span><br>
+          증명하세요
+        </h1>
+        <p class="text-sky-100 text-lg leading-relaxed mb-10">
+          업계 최고의 수수료, 공정한 승급 시스템,<br>
+          그리고 전문가로 성장할 수 있는<br>
+          체계적인 교육을 약속합니다.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#apply" class="bg-white text-sky-600 hover:bg-sky-50 px-8 py-4 rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl">
+            지금 지원하기 →
+          </a>
+          <a href="https://www.primeasset.kr/about/company" target="_blank" class="border-2 border-white/60 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-center transition-all">
+            자세히 알아보기
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PRIME ASSET -->
+  <section id="about" class="py-24 bg-sky-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center text-sky-900 mb-4">
+        왜 <span class="text-sky-500">프라임에셋</span>인가요?
+      </h2>
+      <p class="text-center text-slate-500 mb-16 text-lg">
+        단순한 보험 대리점이 아닙니다.<br>
+        우리는 설계사님의 성장이 곧 회사의 성장이라 믿습니다.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-sky-100 card-hover">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-slate-800">업계 최고 수준 수수료</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">투명하게 공개된 수수료 규정에 따라, 노력한 만큼 정당하게 보상받으세요. 관리자 오버라이딩 없이 투명합니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-sky-100 card-hover">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-slate-800">공정한 승급 시스템</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">밸류체인 시스템을 통해 누구나 본부장까지 승격할 수 있습니다. 인맥이 아닌 실력으로 평가받습니다.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-sky-100 card-hover">
+          <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-slate-800">체계적인 교육 지원</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">신입 정착 교육부터 전문가 심화 과정까지. 혼자가 아닌 함께 성장하는 문화를 지향합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW STANDARD -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-8">
+            보험 영업의<br><span class="text-sky-500">새로운 기준</span>을 제시합니다
+          </h2>
+          <div class="space-y-4">
+            <div class="flex gap-3 items-start">
+              <div class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <p class="text-slate-600">33개 보험사 제품으로 목적에 맞는 설계 가능</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <p class="text-slate-600">영업 기회를 위한 다양한 시책 및 프로모션</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <p class="text-slate-600">DB 제공 및 영업 지원 시스템 완비</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <div class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <p class="text-slate-600">수평적이고 자유로운 조직 문화</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-sky-50 rounded-3xl p-8 border border-sky-100">
+          <div class="text-sky-500 font-semibold text-sm mb-1 tracking-wide">GROWTH SYSTEM</div>
+          <div class="text-2xl font-bold text-slate-800 mb-4">밸류체인 (Value-Chain)</div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">프라임에셋의 밸류체인 시스템은 설계사님이 가져온 성과를 정당하게 귀속시키고 아래로 이어지는 선순환 구조를 만들어갑니다.</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow-sm">
+              <div class="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">1</div>
+              <span class="text-sm text-slate-700 font-medium">설계사 입사</span>
+            </div>
+            <div class="flex justify-center"><div class="w-0.5 h-4 bg-sky-200"></div></div>
+            <div class="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow-sm">
+              <div class="w-8 h-8 bg-sky-400 rounded-lg flex items-center justify-center text-white text-xs font-bold">2</div>
+              <span class="text-sm text-slate-700 font-medium">팀장 승격</span>
+            </div>
+            <div class="flex justify-center"><div class="w-0.5 h-4 bg-sky-200"></div></div>
+            <div class="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow-sm">
+              <div class="w-8 h-8 bg-sky-300 rounded-lg flex items-center justify-center text-white text-xs font-bold">3</div>
+              <span class="text-sm text-slate-700 font-medium">지점장 → 본부장</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES -->
+  <section class="py-24 bg-sky-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center text-sky-900 mb-4">
+        함께한 분들의 <span class="text-sky-500">성공 사례</span>
+      </h2>
+      <p class="text-center text-slate-500 mb-16 text-lg">실제 프라임에셋 설계사님들의 이야기입니다.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-sky-100 card-hover">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 text-xl font-bold flex-shrink-0">김</div>
+            <div>
+              <div class="font-bold text-slate-800">김x은 님</div>
+              <div class="text-xs text-slate-400 mt-0.5">32세 · 입사 8개월차</div>
+            </div>
+          </div>
+          <div class="bg-sky-50 rounded-xl px-4 py-2.5 mb-2">
+            <div class="text-xs text-sky-600 font-semibold">입사 전</div>
+            <div class="text-sm text-slate-600 mt-0.5">5년차 전업주부</div>
+          </div>
+          <div class="bg-green-50 rounded-xl px-4 py-2.5 mb-5">
+            <div class="text-xs text-green-600 font-semibold">현재 성과</div>
+            <div class="text-sm font-bold text-green-700 mt-0.5">월 평균 수입 350만원 달성</div>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed italic">"처음엔 자신이 없었는데, 체계적인 교육 덕분에 빠르게 자리 잡았어요. 아이 학교 끝나는 시간에 맞춰 자유롭게 일할 수 있는 것도 큰 장점입니다."</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-sky-100 card-hover">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 text-xl font-bold flex-shrink-0">이</div>
+            <div>
+              <div class="font-bold text-slate-800">이x준 님</div>
+              <div class="text-xs text-slate-400 mt-0.5">45세 · 입사 2년차</div>
+            </div>
+          </div>
+          <div class="bg-sky-50 rounded-xl px-4 py-2.5 mb-2">
+            <div class="text-xs text-sky-600 font-semibold">입사 전</div>
+            <div class="text-sm text-slate-600 mt-0.5">제조업 회사 퇴직</div>
+          </div>
+          <div class="bg-green-50 rounded-xl px-4 py-2.5 mb-5">
+            <div class="text-xs text-green-600 font-semibold">현재 성과</div>
+            <div class="text-sm font-bold text-green-700 mt-0.5">팀장 승격 · 연 소득 8천만원</div>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed italic">"퇴직 후 막막했는데 밸류체인이 정말 공정했어요. 실력만으로 팀장까지 올라갈 수 있다는 게 이 회사의 가장 큰 장점입니다."</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-sky-100 card-hover">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 text-xl font-bold flex-shrink-0">박</div>
+            <div>
+              <div class="font-bold text-slate-800">박x진 님</div>
+              <div class="text-xs text-slate-400 mt-0.5">28세 · 입사 1년 6개월차</div>
+            </div>
+          </div>
+          <div class="bg-sky-50 rounded-xl px-4 py-2.5 mb-2">
+            <div class="text-xs text-sky-600 font-semibold">입사 전</div>
+            <div class="text-sm text-slate-600 mt-0.5">보험 무경험 사회초년생</div>
+          </div>
+          <div class="bg-green-50 rounded-xl px-4 py-2.5 mb-5">
+            <div class="text-xs text-green-600 font-semibold">현재 성과</div>
+            <div class="text-sm font-bold text-green-700 mt-0.5">팀 리더 역할 · 월 400만원+</div>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed italic">"보험이 뭔지도 몰랐는데 교육 과정이 잘 되어 있어서 금방 적응했어요. 젊은 분들도 충분히 빠르게 성장할 수 있는 환경입니다."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section id="apply" class="py-24 form-bg">
+    <div class="max-w-lg mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-3">지금 바로 도전하세요</h2>
+      <p class="text-center text-sky-200 mb-10">간단한 정보를 남겨주시면 담당자가 친절하게 안내해 드립니다.</p>
+
+      <div class="bg-white rounded-3xl overflow-hidden shadow-2xl">
+        <div class="bg-slate-800 px-8 py-6 text-center">
+          <h3 class="text-white font-bold text-xl">입사 상담 신청</h3>
+          <p class="text-slate-400 text-sm mt-1">프라임에셋의 투명한 시스템을 경험하세요.</p>
+        </div>
+        <div class="px-8 py-8">
+
+          <!-- Progress bar -->
+          <div id="progressBar" class="flex gap-2 mb-8">
+            <div id="bar1" class="flex-1 h-1.5 bg-sky-500 rounded-full transition-all"></div>
+            <div id="bar2" class="flex-1 h-1.5 bg-slate-200 rounded-full transition-all"></div>
+          </div>
+
+          <!-- STEP 1 -->
+          <div id="step1">
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">이름 <span class="text-red-500">*</span></label>
+              <input id="nameInput" type="text" placeholder="홍길동" class="form-input" />
+            </div>
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">연락처 <span class="text-red-500">*</span></label>
+              <div class="flex gap-2">
+                <input id="phoneInput" type="tel" placeholder="010-0000-0000" class="form-input" maxlength="13" style="flex:1; min-width:0;" />
+                <button id="sendOtpBtn" onclick="sendOTP()" style="flex-shrink:0; background:#0ea5e9; color:white; padding:12px 14px; border-radius:10px; font-weight:600; font-size:13px; cursor:pointer; border:none; white-space:nowrap; font-family:'Noto Sans KR',sans-serif; transition:background 0.2s;" onmouseover="this.style.background='#0284c7'" onmouseout="this.style.background='#0ea5e9'">
+                  인증번호 받기
+                </button>
+              </div>
+            </div>
+
+            <!-- OTP Input -->
+            <div id="otpSection" class="hidden mb-5 fade-in">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">
+                인증번호
+                <span id="otpTimer" class="text-sky-500 font-normal ml-1 text-xs">3:00</span>
+              </label>
+              <div class="flex gap-2">
+                <input id="otpInput" type="text" placeholder="인증번호 6자리" class="form-input" maxlength="6" style="flex:1; min-width:0;" inputmode="numeric" />
+                <button onclick="verifyOTP()" style="flex-shrink:0; background:#1e293b; color:white; padding:12px 16px; border-radius:10px; font-weight:600; font-size:13px; cursor:pointer; border:none; font-family:'Noto Sans KR',sans-serif;">
+                  확인
+                </button>
+              </div>
+              <p class="text-xs text-slate-400 mt-2">
+                받지 못하셨나요?
+                <button onclick="resendOTP()" class="text-sky-500 underline ml-1" style="background:none;border:none;cursor:pointer;font-family:'Noto Sans KR',sans-serif;font-size:12px;">재전송</button>
+              </p>
+            </div>
+
+            <!-- Verified badge -->
+            <div id="verifiedBadge" class="hidden mb-5 bg-green-50 border border-green-200 rounded-xl px-4 py-3 fade-in">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="text-green-700 text-sm font-semibold">전화번호 인증 완료</span>
+              </div>
+            </div>
+
+            <button id="step1Next" onclick="goStep2()" class="btn-primary hidden">다음 단계 →</button>
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="step2" class="hidden fade-in">
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">거주지역 <span class="text-red-500">*</span></label>
+              <input id="regionInput" type="text" placeholder="예: 서울 강남구, 부산 해운대구" class="form-input" />
+            </div>
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">경력 사항 <span class="text-red-500">*</span></label>
+              <select id="careerInput" class="form-input bg-white">
+                <option value="">경력을 선택해주세요</option>
+                <option value="무경험">보험 무경험</option>
+                <option value="1년미만">보험 경력 1년 미만</option>
+                <option value="1~3년">보험 경력 1~3년</option>
+                <option value="3~5년">보험 경력 3~5년</option>
+                <option value="5년이상">보험 경력 5년 이상</option>
+                <option value="타직종">타직종 경력자</option>
+              </select>
+            </div>
+            <div class="mb-6 bg-slate-50 rounded-xl p-4 border border-slate-100">
+              <label class="flex gap-3 cursor-pointer">
+                <input type="checkbox" id="privacyCheck" class="mt-0.5 w-4 h-4 flex-shrink-0" style="accent-color:#0ea5e9;" />
+                <div>
+                  <p class="text-sm font-semibold text-slate-700">개인정보 수집 및 이용 동의 <span class="text-red-500">*</span></p>
+                  <p class="text-xs text-slate-400 mt-1">수집된 정보는 입사 상담 목적으로만 사용되며, 상담 종료 후 파기됩니다.</p>
+                </div>
+              </label>
+            </div>
+            <button id="submitBtn" onclick="submitForm()" class="btn-primary">상담 신청하기</button>
+            <button onclick="goStep1()" style="width:100%;text-align:center;font-size:13px;color:#94a3b8;margin-top:12px;padding:8px;background:none;border:none;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+              ← 이전으로
+            </button>
+          </div>
+
+          <!-- SUCCESS -->
+          <div id="successState" class="hidden text-center py-8 fade-in">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-3">신청이 완료되었습니다!</h3>
+            <p class="text-slate-500 leading-relaxed">담당자가 <strong class="text-slate-700">영업일 기준 1~2일 이내</strong>에<br>연락드리겠습니다. 조금만 기다려주세요.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <div class="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <span class="text-white font-bold text-lg tracking-tight">PRIME ASSET</span>
+      </div>
+      <p class="font-semibold text-slate-300 mb-2">프라임에셋 마스터사업부</p>
+      <p class="text-sm mb-1">서울 구로구 항동 산51-1, 구로SKV1센터 201호 프라임에셋 마스터사업부 서울사무소</p>
+      <p class="text-sm mb-8">사업자 : 프라임에셋 &nbsp;|&nbsp; 업종 : 보험 &nbsp;|&nbsp; 사업자등록번호 : 194-95-01692<br>
+      경기 안산시 단원구 광덕4로 180 (고잔동, 부원프라자) 403호</p>
+      <div class="border-t border-slate-800 pt-6 text-xs text-slate-500 space-y-1">
+        <p>© 2025 Prime Asset Recruitment. All rights reserved.</p>
+        <p>본 페이지는 보험설계사 모집을 위한 홍보 페이지입니다.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ↓↓↓ Apps Script 배포 URL로 교체하세요 ↓↓↓
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJwanJ9vRMwM4MXL6tjWO6CGPEE35-9xtrcbBSDuOo6GlfZY0Vsu-DV4avFMhkZKp0qg/exec';
+
+    let otpVerified = false;
+    let timerInterval = null;
+    let canResend = true;
+
+    // 전화번호 자동 하이픈
+    document.getElementById('phoneInput').addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 7) v = v.slice(0,3) + '-' + v.slice(3,7) + '-' + v.slice(7);
+      else if (v.length > 3) v = v.slice(0,3) + '-' + v.slice(3);
+      e.target.value = v;
+    });
+
+    async function sendOTP() {
+      const name = document.getElementById('nameInput').value.trim();
+      const phone = document.getElementById('phoneInput').value.trim();
+
+      if (!name) { alert('이름을 입력해주세요.'); return; }
+      if (!phone.match(/^010-\d{4}-\d{4}$/)) {
+        alert('올바른 전화번호를 입력해주세요.\n예: 010-1234-5678');
+        return;
+      }
+      if (!canResend) { alert('잠시 후 다시 시도해주세요.'); return; }
+
+      const btn = document.getElementById('sendOtpBtn');
+      btn.disabled = true;
+      btn.textContent = '전송중...';
+      canResend = false;
+
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'sendOTP', phone, name })
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('otpSection').classList.remove('hidden');
+          document.getElementById('otpInput').value = '';
+          startTimer(180);
+          btn.textContent = '재전송';
+          setTimeout(() => { btn.disabled = false; canResend = true; }, 60000);
+        } else {
+          alert(data.message || '인증번호 전송에 실패했습니다.');
+          btn.textContent = '인증번호 받기';
+          btn.disabled = false;
+          canResend = true;
+        }
+      } catch {
+        alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        btn.textContent = '인증번호 받기';
+        btn.disabled = false;
+        canResend = true;
+      }
+    }
+
+    async function verifyOTP() {
+      const phone = document.getElementById('phoneInput').value.trim();
+      const otp = document.getElementById('otpInput').value.trim();
+
+      if (!otp || otp.length !== 6) { alert('인증번호 6자리를 입력해주세요.'); return; }
+
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'verifyOTP', phone, otp })
+        });
+        const data = await res.json();
+        if (data.success) {
+          otpVerified = true;
+          clearInterval(timerInterval);
+          document.getElementById('otpSection').classList.add('hidden');
+          document.getElementById('verifiedBadge').classList.remove('hidden');
+          document.getElementById('step1Next').classList.remove('hidden');
+          document.getElementById('phoneInput').classList.add('verified');
+          document.getElementById('sendOtpBtn').disabled = true;
+        } else {
+          alert(data.message || '인증번호가 올바르지 않습니다.');
+        }
+      } catch {
+        alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+      }
+    }
+
+    function resendOTP() { sendOTP(); }
+
+    function startTimer(seconds) {
+      clearInterval(timerInterval);
+      let rem = seconds;
+      const el = document.getElementById('otpTimer');
+      el.classList.remove('text-red-500');
+      timerInterval = setInterval(() => {
+        rem--;
+        const m = Math.floor(rem / 60);
+        const s = rem % 60;
+        el.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+        if (rem <= 0) {
+          clearInterval(timerInterval);
+          el.textContent = '만료';
+          el.classList.add('text-red-500');
+        }
+      }, 1000);
+    }
+
+    function goStep2() {
+      if (!otpVerified) { alert('전화번호 인증을 완료해주세요.'); return; }
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+      document.getElementById('bar2').classList.remove('bg-slate-200');
+      document.getElementById('bar2').classList.add('bg-sky-500');
+    }
+
+    function goStep1() {
+      document.getElementById('step2').classList.add('hidden');
+      document.getElementById('step1').classList.remove('hidden');
+      document.getElementById('bar2').classList.add('bg-slate-200');
+      document.getElementById('bar2').classList.remove('bg-sky-500');
+    }
+
+    async function submitForm() {
+      const region = document.getElementById('regionInput').value.trim();
+      const career = document.getElementById('careerInput').value;
+      const privacy = document.getElementById('privacyCheck').checked;
+
+      if (!region) { alert('거주지역을 입력해주세요.'); return; }
+      if (!career) { alert('경력 사항을 선택해주세요.'); return; }
+      if (!privacy) { alert('개인정보 수집 및 이용에 동의해주세요.'); return; }
+
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.textContent = '제출중...';
+
+      const payload = {
+        action: 'submit',
+        name: document.getElementById('nameInput').value.trim(),
+        phone: document.getElementById('phoneInput').value.trim(),
+        region, career,
+        timestamp: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
+      };
+
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('step2').classList.add('hidden');
+          document.getElementById('progressBar').classList.add('hidden');
+          document.getElementById('successState').classList.remove('hidden');
+        } else {
+          alert('제출 중 오류가 발생했습니다. 다시 시도해주세요.');
+          btn.disabled = false;
+          btn.textContent = '상담 신청하기';
+        }
+      } catch {
+        alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        btn.disabled = false;
+        btn.textContent = '상담 신청하기';
+      }
+    }
+  </script>
+</body>
+</html>
